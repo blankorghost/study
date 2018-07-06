@@ -3,8 +3,513 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			width: 100%;
+		}
+		ul{
+			list-style: none;
+		}
+		ol{
+			list-style: none;
+		}
+		#left{
+			position: relative;
+			float: left;
+			width: 22%;
+			height: 1315px;
+		}
+		#nav{
+			position: relative;
+			float: left;
+			width: 30%;
+			height: 100%;
+			background: #1D2531;
+		}
+		#menu{
+			position: relative;
+			float: left;
+			width: 70%;
+			height: 100%;
+			background: #222C3C;
+		}
+		#right{
+			position: relative;
+			float: left;
+			width: 78%;
+			height: auto;
+		}
+		#nav>ul{
+			text-align: center;
+			height: 90%;
+		}
+		#nav>ul>li{
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			line-height: 80px;
+			margin-top: 30px; 
+			margin-left: 15px;
+		}
+		.menu-li{
+			width: 80%;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-top: 40px;
+			height: 90%;
+		}
+		.fontstyle{
+			color: #ffffff;
+			clear: both;
+			line-height: 35px;
+		}
+		.li-tit{
+			color: #5B6779;
+		}
+		.h-height{
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border: 1px solid #2A3547;
+		}
+		#top{
+			width: 100%;
+			height: 100px;
+			border-bottom: 1px solid #E9E6EC;
+		}
+		.side{
+			position: relative;
+			float: left;
+			width: 36%;
+			height: 100%;
+			border-right: 1px solid #E9E6EC;
+		}
+		.search{
+			width: 100%;
+			height: 70px;
+			border-bottom: 1px solid #E9E6EC;
+			text-align: center;
+		}
+		.search-tit>input{
+			height: 35px;
+			width: 80%;
+			border: none;
+		}
+		.search-tit>img{
+			margin-top: 10px;
+		}
+		.search-tit{
+			width: 80%;
+			margin-top: 20px;
+			margin-right: 10%;
+			margin-left: 10%;
+			height: auto;
+			border: 1px solid #E6E9EE;
+			border-radius: 5px;
+		}
+		.person>ul>li{
+			width: 100%;
+			height: 140px;
+			margin-top: 15px;
+			border-bottom: 1px solid #E9E6EC;
+		}
+		.badge{
+			display: inline-block;
+			min-width: 10px;
+			padding: 3px 7px;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 1;
+			color: #fff;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: baseline;
+			background-color: #2B9FF7;
+			border-radius: 12px;
+			float: right;
+			margin-top: 10px;
+		}
+		.time{
+			width: auto;
+			height: auto;
+			float: right;
+			margin-right: 20px;
+			font-size: 15px;
+			color: #9CA8B8;
+			margin-top: 20px;
+		}
+		.icon{
+			float: left;
+			margin-left: 15px; 
+		}
+		.name{
+			float: left;
+			color: #676A74;
+			margin-top: 20px;
+		}
+		.com{
+			float: left;
+			color: #9CA8B8;
+			margin-left: -100px;
+			margin-top: 45px;
+		}
+		.detail{
+			clear: both;
+			float: left;
+			color: #9CA8B8;
+			margin-left: 20px;
+		}
+		.badge-l{
+			clear: both;
+			display: inline-block;
+			padding: 5px 5px;
+			font-weight: bold;
+			line-height: 1;
+			color: #fff;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: baseline;
+			background-color: #2B9FF7;
+			width: 20px;
+			height: 20px;
+			float: right;
+            border-radius: 50%;
+            margin-right: 20px;
+            margin-top: -35px;
+		}
+		.status{
+			float: left;
+			margin-top: -30px;
+			font-size: 70px;
+			border-radius: 50%;
+			color: #00AAFF; 
+		}
+		#say{
+			position: relative;	
+			float: right;
+			width: 63.9%;
+			height: auto;
+		}
+		#say-people{
+			width: 100%;
+			height: 90px;
+			border-bottom: 1px solid #E9E6EC;
+		}
+		#top>h1{
+			color: #989CA4;
+			float: left;
+			margin-left: 30px;
+			margin-top: 25px;
+		}
+		#my{
+			float: right;
+			margin-top: 20px;
+			margin-right: 20px;
+		}
+		#my>img{
+			float: left;
+		}
+		.name-s{
+			float: left;
+			margin-left: 10px;
+			color: #60656F;
+			margin-top: 10px;
+		}
+		.time-s{
+			float: left;
+			color: #B9C0CC;
+			margin-left: 10px;
+			margin-top: 12px;
+		}
+		#say-all>ul>li{
+			margin-top: 25px;
+			margin-right: 40px;
+		}
+		.detail-s{
+			float: left;
+			color: #9CA8B8;
+			margin-left: 100px;
+			margin-top: -30px;
+		}
+		.bottom{
+			height: auto;
+			margin-top: -40px;
+		}
+		.bottom>li{
+			float: left;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+		}
+		.bottom>img{
+			width: 100%;
+			height: 100%;
+		}
+		.salary{
+			clear: both;
+			float: left;
+			width: 100%;
+			height: 5px;
+			background: #2D3848;
+			border-radius: 3px;
+			margin-top: 10px;
+		}
+		.part-left{
+			clear: both;
+			margin-top: 20px;
+			width: 50%;
+			float: left;
+			border-bottom: 1px solid #E9E6EC;
+		}
+		.part-right{
+			clear: both;
+			width: 40%;
+			float: right;
+			border-bottom: 1px solid #E9E6EC;
+		}
+		.new{
+			clear: both;
+			float: left;
+			width: 
+		}
+		#sub{
+			width: 95%;
+			margin-top: 25px;
+			height: auto;
+			float: left;
+			clear: both;
+			margin-left: 20px;
+			border: 1px solid #E8EBEF;
+			border-radius: 5px;
+		}
+		#sub>input{
+			width: 90%;
+			height: 50px;
+			border: none;
+		}
+		#sub>button{
+			float: left;
+			font-size: 25px;
+			color: #949FB2;
+			background: #F4F5F9;
+			width: 50px;
+			height: 50px;
+			border: none;
+		}
+		.active{
+            float: right;
+            margin-top: 30px;
+            margin-right: 20px;
+		}
+		.active-1{
+			float: left;
+			border: 1px solid #CED0DA;border-radius: 5px;
+		}
+		.active-1>button{
+			width: 40px;
+			height: 30px;
+			background: #FCFCFD;border: 0;
+		}
+	</style>
 </head>
 <body>
-	<h1>111</h1>
+	<div class="container">
+		<div id="left">
+			<div id="nav">
+				<ul>
+					<li style="background:#2197F0;"><a href=""><img src="./image/Item 1.png" alt=""></a></li>
+					<li style="background:#937DE4;"><a href=""><img src="./image/Item 2.png" alt=""></a></li>
+					<li style="background:#ED4D31;"><a href=""><img src="./image/Item 3.png" alt=""></a></li>
+					<li><a href=""><img src="./image/Base.png" alt=""></a></li>
+					<li style="margin-top: -65px;"><a href=""><img src="./image/Plus Icon.png" alt=""></a></li>
+				</ul>
+				<ol class="bottom" style="margin-left: 30px;margin-top: 0px;">
+					<li><a href="##"><img src="./image/Grid.png" alt=""></li></a>
+					<li><a href="##"><img src="./image/Settings.png" alt="" style="margin-left: 20px;"></li></a>
+				</ol>
+			</div>
+			<div id="menu">
+				<div class="menu-li">
+					<ul>
+						<li class="li-tit"><span style="float: left;">MENU</span><img src="./image/Settings.png" style="float: right;"></li>
+						<ul class="fontstyle">
+							<li>Overview</li>
+							<li>Sales<span class="badge">54</span></li>
+							<li>Your Staff</li>
+							<li>Analytics & Targeting</li>
+							<li>What's New</li>
+						</ul>
+						<hr class="h-height">
+						<li class="li-tit"><span style="float: left;">YOUR PRODUCTS</span> <img src="./image/Settings.png" style="float: right;"></li>
+						<ul class="fontstyle">
+							<li>Books</li>
+							<li>Tulorials</li>
+							<li>Stocks</li>
+							<li>Infographics</li>
+						</ul>
+						<hr class="h-height">
+						<li class="li-tit"><span style="float: left;">DASHBOARD</span> <img src="./image/Settings.png" style="float: right;"></li>
+						<ul class="fontstyle">
+							<li>Messages <span class="badge">21</span></li>
+							<li>Connections</li>
+							<li>Integrations
+								<span class="badge" style="border-radius: 50%;background: #DE3B1F;padding: 0;width: 30px;height: 30px;font-size: 25px;">!</span>
+							</li>
+							<li>Account Settings</li>
+							<li>App Setting</li>
+						</ul>
+						
+					</ul>
+				</div>
+				<div class="bottom menu-li">
+					<ul>
+						<li class="li-tit"><span style="float: left;color: #FDFDFD;width: 60%;">Monthly Goals</span>
+							<span style="float: right;color: #FDFDFD;width: 40%;">$580/$3200</span></li>
+					</ul>
+					<div class="salary">
+						<div style="width: 20%;height: 100%;background: #907BE0;border-radius: 3px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="right">
+			<div id="top">
+				<h1>Message</h1>
+				<div id="my">
+					<img src="./image/Image 9.png" alt="">
+					<h3 class="name" style="color: #00AAFF;">Jordan J.</h3>
+					<span class="com" style="margin-left: -80px;">Administrator</span>
+					<button type="submit" style="border: 0;background: #ffffff;margin-left: 30px;margin-top: 30px;"><img src="./image/dropdown.png" alt=""></button>
+				</div>
+			</div>
+			<div id="main">
+				<div class="side">
+					<div class="search">
+						<div class="search-tit">
+							<input type="text" placeholder="Search"><a href="##"><img src="./image/Search icon.png" alt=""></a>
+						</div>
+					</div>
+					<div class="person">
+						<ul>
+							<li>
+								<img src="./image/Image 2.png" alt="" class="icon"><span class="status">.</span><h3 class="name" style="color: #00AAFF;">Bessie Berry</h3><span class="time">3m</span>
+								<span class="com">Twitter</span>
+								
+								<div>
+									<p class="detail" style="width: 80%;"> i would like to tell you that pursue law is one of my lifelong goal,i like my major ...</p>
+									<span class="badge-l">4</span>
+								</div>
+							</li>
+							<li>
+								<img src="./image/Image 3.png" alt="" class="icon"><h3 class="name">Victor Weber</h3><span class="time">8m</span>
+								<span class="com">Adobe</span>
+								<p class="detail"> i would like to tell you that pursue law is one of my lifelong goal,i like my major ...</p>
+							</li>
+							<li>
+								<img src="./image/Image 4.png" alt="" class="icon"><h3 class="name">Dustin Benson</h3><span class="time">Yesterday</span>
+								<span class="com">Facebook</span>
+								<p class="detail"> i would like to tell you that pursue law is one of my lifelong goal,i like my major ...</p>
+							</li>
+							<li>
+								<img src="./image/Image 5.png" alt="" class="icon"><h3 class="name">Jack Mason</h3><span class="time">Yesterday</span>
+								<span class="com">Yahoo</span>
+								<p class="detail"> i would like to tell you that pursue law is one of my lifelong goal,i like my major p...</p>
+							</li>
+							<li>
+								<img src="./image/Image 6.png" alt="" class="icon"><h3 class="name">Stephen Shelton</h3><span class="time">13 Jun</span>
+								<span class="com">Snapchat</span>
+								<p class="detail"> i would like to tell you that pursue law is one of my lifelong goal,i like my major ...</p>
+							</li>
+							<li>
+								<img src="./image/Image 7.png" alt="" class="icon"><h3 class="name">Sally Willis</h3><span class="time">12 Jun</span>
+								<span class="com">Twitter</span>
+								<p class="detail"> i would like to tell you that pursue law is one of my lifelong goal,i like my major ...</p>
+							</li>
+							<li>
+								<img src="./image/Image 8.png" alt="" class="icon"><h3 class="name">Robert Patton</h3><span class="time">9 Jun</span>
+								<span class="com">Team</span>
+								<p class="detail"> i would like to tell you that pursue law is one of my lifelong goal,i like my major ...</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="say">
+					<div id="say-people">
+						<span class="name" style="margin-left: 20px;margin-top: 30px;">Bessle Berry
+						</span>
+						<span class="status" style="color: #1BB934;margin-top: -28px;">.</span>
+						<div class="active">
+							<div class="active-1">
+								<button type="submit"><img src="./image/User icon.png" alt=""></button>
+								<button type="submit" style="border-right: 1px solid #CED0DA;border-left: 1px solid #CED0DA;"><img src="./image/Upload icon.png" alt=""></button>
+								<button type="submit"><img src="./image/Trash icon.png" alt=""></button>
+							</div>
+							<div style="width: 0; height: 30px;border: 1px solid #CED0DA;float: left;margin-left: 20px;"></div>
+							<span style="float: left;color: #8995AC;margin-left: 20px;margin-top: 10px;"><strong>1 of 28</strong></span>
+							<div class="active-1" style="margin-left: 20px;">
+								<button type="submit" style="border-right: 1px solid #CED0DA;"><img src="./image/Arrow left.png" alt=""></button>
+								<button type="submit"><img src="./image/Arrow right.png" alt=""></button>
+							</div>
+						</div>
+					</div>
+					<div id="say-all">
+						<ul>
+							<li>
+								<img src="./image/Image 2.png" alt="" class="icon"><h3 class="name-s">Sally Willis</h3><span class="time-s">8:31 AM</span>
+								<p class="detail-s"> i would like to tell you that pursue law is one of my lifelong goal,i like my major i would like to tell you that pursue law is one of my lifelong goal,i like my majori would like to tell you that pursue law is one of my lifelong goal,i like my major</p>
+							</li>
+							<li>
+								<img src="./image/Image 9.png" alt="" class="icon"><h3 class="name-s">Jordan Jackson</h3><span class="time-s">8:31 AM
+								</span>
+								<p class="detail-s"> i would like to tell you that pursue law is one of my lifelong goal,i like my major i would like to tell you that pursue law is one of my lifelong goal,i like my majori would like to tell you that pursue law is one of my lifelong goal,i like my majorone of my lifelong goal,i like my majori would like to tell you that pursue law is one of my lifelong goal,i like my major</p>
+							</li>
+						</ul>
+						<br>
+						<div style="clear: both;float: left;width: 100%;">
+							<div class="part-left"></div>
+							<div style="margin-top: 10px;"><span style="color: #D4D9E0;margin-left: 10px;">Tuesday</span></div>
+							<div class="part-right" style="margin-top: -10px;width: 40%;"></div>
+						</div>
+						<ul>
+							<li>
+								<img src="./image/Image 2.png" alt="" class="icon"><h3 class="name-s">Sally Willis</h3><span class="time-s">8:31 AM</span>
+								<p class="detail-s"> i would like to tell you that pursue law is one of my lifelong goal,i like my major i would like to tell you that pursue law is one of my lifelong goal,i like my majori would like to tell you that pursue law is one of my lifelong goal,i like my major</p>
+							</li>
+							<li>
+								<img src="./image/Image 9.png" alt="" class="icon"><h3 class="name-s">Jordan Jackson</h3><span class="time-s">8:31 AM
+								</span>
+								<p class="detail-s"> i would like to tell you that pursue law is one of my lifelong goal,i like my major i would like to tell you that pursue law is one of my lifelong goal,i like my majori would like to tell you that pursue law is one of my lifelong goal,i like my majorone of my lifelong goal,i like my majori would like to tell you that pursue law is one of my lifelong goal,i like my major</p>
+
+								<p class="detail" style="margin-left: 100px;"><img src="./image/Image 11.png" alt="">
+									<img src="./image/Image 12.png" alt="" style="margin-left: 20px;"></p>
+							</li>
+						</ul>
+						<br>
+						<div style="clear: both;float: left;width: 100%;">
+							<div class="part-left" style="border-color: #4EA6F3;"></div>
+							<div style="margin-top: 10px;">
+								<span style="color: #4EA6F3;margin-top: 5px;margin-left: 10px;">New Messages</span>
+							</div>
+							<div class="part-right" style="border-color: #4EA6F3;margin-top: -10px;width: 33%;"></div>
+						</div>
+						<div class="new">
+							<ul>
+								<li>
+									<img src="./image/Image 2.png" alt="" class="icon"><h3 class="name-s">Sally Willis</h3><span class="time-s">8:31 AM</span>
+									<p class="detail-s" style="margin-right: 40px;"> i would like to tell you that pursue law is one of my lifelong goal,i like my major i would like to tell you that pursue law is one of my lifelong goal,i like my majori would like to tell you that pursue law is one of my lifelong goal,i like my major</p>
+								</li>
+							</ul>
+							<div id="sub">
+								<button type="submit">+</button><input type="text" placeholder="would like to tell you that pursue law">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
